@@ -65,14 +65,14 @@
 \color[HTML]{303030} % Default foreground color
 \definecolor{link}{HTML}{506060} % Hyperlinks
 \hypersetup{colorlinks,breaklinks,urlcolor=link,linkcolor=link}
-\setkomafont{disposition}{\color[HTML]{801010}}
+\setkomafont{disposition}{\color[HTML]{4885ED}}
 \setkomafont{section}{\scshape\Large\mdseries}
 
 % In tccv \part must contain the subject of the curriculum vitae.
 % The command will start a new page and output in onecolumn the
 % subject (first and last name) with the text from the optional
 % argument underneath it
-\renewcommand\part[2][Curriculum Vitae]{%
+\renewcommand\part[2][]{%
     \twocolumn[%
     \begin{center}
 	\vskip-\lastskip%
@@ -115,7 +115,7 @@
     \needspace{0.5\textheight}%
     \newdimen\boxwidth%
     \boxwidth=\dimexpr\linewidth-2\fboxsep\relax%
-    \colorbox[HTML]{F5DD9D}{%
+    \colorbox[HTML]{FFFFFF}{%
     \begin{tabularx}{\boxwidth}{c|X}
     \SYMBOL{45} & {#2}\smallskip\\
     \SYMBOL{37} & {#3}\smallskip\\
@@ -136,8 +136,8 @@
     \renewcommand\item[3]{%
 	\inskip%
 	{\raggedleft\textsc{##1}\\[1pt]}
-	\ifstrempty{##2}{}{##2\\[2pt]}
-	{\Large\textit{##3}}
+	\large\ifstrempty{##2}{}{##2\\[2pt]}
+	{\normalsize\textit{##3}}
 	\medskip
 	\renewcommand\inskip{\bigskip}}}
     {\bigskip}
